@@ -30,6 +30,10 @@ public class LivingThing {
         return dead;
     }
 
+    /**
+     *Selects a natural number up to the attack power and output a message.
+     * @param opponent the attack target
+     */
     public void attack(LivingThing opponent){
         if(dead==false){
             int damage = (int) (Math.random() * attack);
@@ -38,6 +42,10 @@ public class LivingThing {
         }
     }
 
+    /**
+     * Judges death and output message.
+     * @param damage the damage received
+     */
     public void wounded(int damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
